@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.testcases.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="GroupsPage(failed)">
+    <classes>
+      <class name="com.testcases.GroupsTC">
+        <methods>
+          <include name="navigatetogroups"/>
+          <include name="initialize"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testcases.GroupsTC -->
+    </classes>
+  </test> <!-- GroupsPage(failed) -->
+  <test thread-count="5" parallel="tests" name="DashboardPage(failed)">
+    <classes>
+      <class name="com.testcases.DashBoardPage">
+        <methods>
+          <include name="teardown"/>
+          <include name="navigatetodashboard"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- com.testcases.DashBoardPage -->
+    </classes>
+  </test> <!-- DashboardPage(failed) -->
+</suite> <!-- Failed suite [Suite] -->
